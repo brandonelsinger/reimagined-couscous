@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" />
     <!-- client css -->
     <link rel="stylesheet" href="client.css" />
+    <!-- client js -->
+    <script src="discount.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-primary-subtle">
@@ -99,6 +101,43 @@
         <hr class="my-4" />
         <p class="fs-5">For exceptional international cuisine, look no further.</p>
         <button class="btn btn-primary px-5 mb-1" type="button"><i class="bi bi-cart me-2"></i>Order Now</button>
+      </div>
+      <div class="row p-2 m-2" id="discount-row">
+        <div class="col px-2 py-4">
+          <h3>Tis The Seasoning</h3>
+          <div class="mb-4">
+            Order today! Save 12.5% on Chef Anton's Italian Seasoning. You don't want to make Chef Anton mad, do you?
+          </div>
+          <i>Discount expires: 2/25/2026</i><br />
+          <i class="bi bi-receipt me-2"></i><a href="#" class="discount" data-product="Chef Anton's Italian Seasoning" data-discount-title="Tis the Seasoning" data-discount-code="SEASON125">Discount Code</a>
+        </div>
+        <div class="col px-2 py-4">
+          <h3>Soy Into You</h3>
+          <div class="mb-4">
+            Order today! Save 20% on Northwind Premium Soy Sauce. Your stir fry will thank you.
+          </div>
+          <i>Discount expires: 2/25/2026</i><br />
+          <i class="bi bi-receipt me-2"></i><a href="#" class="discount" data-product="Northwind Premium Soy Sauce" data-discount-title="Soy Into You" data-discount-code="SOY20">Discount Code</a>
+        </div>
+        <div class="col px-2 py-4">
+          <h3>Don't Go Bacon My Heart</h3>
+          <div class="mb-4">
+            Order today! Save 30% on Northwind Smoked Bacon. It's so good, it'll steal your heart.
+          </div>
+          <i>Discount expires: 2/25/2026</i><br />
+          <i class="bi bi-receipt me-2"></i><a href="#" class="discount" data-product="Northwind Smoked Bacon" data-discount-title="Don't Go Bacon My Heart" data-discount-code="BACON30">Discount Code</a>
+        </div>
+      </div>
+    </div>
+    <!-- toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto" id="product">Product</strong>
+          <small class="text-body-secondary" id="discountTitle">discount title</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="discountCode">Discount Code: 1234</div>
       </div>
     </div>
   </body>
